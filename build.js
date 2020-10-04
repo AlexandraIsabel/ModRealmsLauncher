@@ -45,12 +45,13 @@ builder.build({
             category: 'public.app-category.games'
         },
         linux: {
-            target: 'AppImage',
+            target: ['AppImage'],
             maintainer: 'TheFlash787',
             vendor: 'ModRealms Network',
             synopsis: 'Modded Minecraft Launcher',
             description: 'Custom launcher which allows users to join our modded servers. All mods, configurations, and updates are handled automatically.',
-            category: 'Game'
+            category: 'Game',
+            executableArgs: ['--no-sandbox']
         },
         compression: 'maximum',
         files: [
